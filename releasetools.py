@@ -20,15 +20,19 @@ import re
 
 def FullOTA_InstallEnd(info):
   input_zip = info.input_zip
+  OTA_InstallRecovery(info)
   OTA_UpdateFirmware(info)
   OTA_InstallEnd(info, input_zip)
   return
 
 def IncrementalOTA_InstallEnd(info):
   input_zip = info.target_zip
-  OTA_UpdateFirmware(info)
   OTA_InstallEnd(info, input_zip)
   return
+
+def OTA_InstallRecovery(info):
+  info.script.AppendExtra('ui_print("Flashing Recovery");')
+  info.script.AppendExtra('package_extract_file("recovery/recovery.img", "/dev/block/bootdevice/by-name/recovery"')
 
 def OTA_UpdateFirmware(info):
   info.script.AppendExtra('ui_print("Flashing firmware images");')
