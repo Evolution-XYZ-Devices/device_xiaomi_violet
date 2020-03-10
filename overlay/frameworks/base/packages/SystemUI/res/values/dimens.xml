@@ -18,7 +18,18 @@
 <resources>
     <!-- for 20dp of padding at 2.75px/dp at default density -->
     <dimen name="rounded_corner_content_padding">55px</dimen>
-
+    <!-- Padding for System icons on keyguard. -->
+    <dimen name="system_icons_keyguard_padding_end">16dp</dimen>
+    <!-- Padding for icons of the status bar from the corners. -->
+    <dimen name="status_bar_extra_padding">14dp</dimen>
+    <!-- Default radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">40dp</dimen>
+    <!-- Radius of the software rounded corners at the top of the display in its natural
+    orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_top">106.0px</dimen>
+    <!-- Radius of the software rounded corners at the bottom of the display in its natural
+    orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_bottom">108.0px</dimen>
     <!-- Padding for the system icons on the keyguard (when no multi user switch is showing).
     The icons always have a 4dp padding in the container so we only need 41 extra px of padding
     for the corners -->
