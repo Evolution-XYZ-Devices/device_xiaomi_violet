@@ -20,36 +20,13 @@ import re
 
 def FullOTA_InstallEnd(info):
   input_zip = info.input_zip
-  OTA_UpdateFirmware(info)
   OTA_InstallEnd(info, input_zip)
   return
 
 def IncrementalOTA_InstallEnd(info):
   input_zip = info.target_zip
-  OTA_UpdateFirmware(info)
   OTA_InstallEnd(info, input_zip)
   return
-
-def OTA_UpdateFirmware(info):
-  info.script.AppendExtra('ui_print("Flashing firmware images");')
-  info.script.AppendExtra('package_extract_file("install/firmware/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");')
-  info.script.AppendExtra('package_extract_file("install/firmware/imagefv.elf", "/dev/block/bootdevice/by-name/imagefv");')
-  info.script.AppendExtra('package_extract_file("install/firmware/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");')
-  info.script.AppendExtra('package_extract_file("install/firmware/hyp.mbn", "/dev/block/bootdevice/by-name/hyp");')
-  info.script.AppendExtra('package_extract_file("install/firmware/km4.mbn", "/dev/block/bootdevice/by-name/keymaster");')
-  info.script.AppendExtra('package_extract_file("install/firmware/tz.mbn", "/dev/block/bootdevice/by-name/tz");')
-  info.script.AppendExtra('package_extract_file("install/firmware/aop.mbn", "/dev/block/bootdevice/by-name/aop");')
-  info.script.AppendExtra('package_extract_file("install/firmware/multi_image.mbn", "/dev/block/bootdevice/by-name/multiimgoem");')
-  info.script.AppendExtra('package_extract_file("install/firmware/xbl_config.elf", "/dev/block/bootdevice/by-name/xbl_config");')
-  info.script.AppendExtra('package_extract_file("install/firmware/storsec.mbn", "/dev/block/bootdevice/by-name/storsec");')
-  info.script.AppendExtra('package_extract_file("install/firmware/uefi_sec.mbn", "/dev/block/bootdevice/by-name/uefisecapp");')
-  info.script.AppendExtra('package_extract_file("install/firmware/qupv3fw.elf", "/dev/block/bootdevice/by-name/qupfw");')
-  info.script.AppendExtra('package_extract_file("install/firmware/abl.elf", "/dev/block/bootdevice/by-name/abl");')
-  info.script.AppendExtra('package_extract_file("install/firmware/devcfg.mbn", "/dev/block/bootdevice/by-name/devcfg");')
-  info.script.AppendExtra('package_extract_file("install/firmware/xbl.elf", "/dev/block/bootdevice/by-name/xbl");')
-  info.script.AppendExtra('package_extract_file("install/firmware/dspso.bin", "/dev/block/bootdevice/by-name/dsp");')
-  info.script.AppendExtra('package_extract_file("install/firmware/NON-HLOS.bin", "/dev/block/bootdevice/by-name/modem");')
-  info.script.AppendExtra('package_extract_file("install/firmware/BTFM.bin", "/dev/block/bootdevice/by-name/bluetooth");')
 
 def AddImage(info, input_zip, basename, dest):
   path = "IMAGES/" + basename
@@ -64,5 +41,4 @@ def AddImage(info, input_zip, basename, dest):
 def OTA_InstallEnd(info, input_zip):
   AddImage(info, input_zip, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
-  AddImage(info, input_zip, "recovery.img", "/dev/block/bootdevice/by-name/recovery")
   return

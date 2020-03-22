@@ -364,8 +364,8 @@ PRODUCT_PACKAGES += \
     rcs_service_api.xml
 
 # Recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/recovery.img:recovery.img
+PRODUCT_PACKAGES += \
+    librecovery_updater_xiaomi
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
