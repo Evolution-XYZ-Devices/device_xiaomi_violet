@@ -5,6 +5,11 @@
     "branch": "ten"
   },
   {
+    "repository": "vendor_MiuiCamera",
+    "target_path": "vendor/MiuiCamera",
+    "branch": "violet"
+  },
+  {
     "repository": "packages_apps_GoogleCamera_violet",
     "target_path": "packages/apps/GoogleCamera",
     "branch": "ten",
