@@ -8,5 +8,10 @@
     "repository": "vendor_MiuiCamera",
     "target_path": "vendor/ANXCamera",
     "branch": "violet"
+  },
+  {
+    "repository": "tesla59/hydra_kernel",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "ten"
   }
 ]
