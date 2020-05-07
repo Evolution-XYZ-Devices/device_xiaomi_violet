@@ -8,11 +8,5 @@
     "repository": "vendor_MiuiCamera",
     "target_path": "vendor/ANXCamera",
     "branch": "violet"
-  },
-  {
-    "repository": "packages_apps_GoogleCamera_violet",
-    "target_path": "packages/apps/GoogleCamera",
-    "branch": "ten",
-    "remote": "pixel-gitlab"
   }
 ]
