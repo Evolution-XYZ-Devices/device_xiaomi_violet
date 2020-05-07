@@ -120,9 +120,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_gl_backpressure=1 \
-    debug.sf.early_phase_offset_ns=500000 \
-    debug.sf.early_app_phase_offset_ns=500000 \
+    debug.sf.early_phase_offset_ns=1500000 \
+    debug.sf.early_app_phase_offset_ns=1500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000 \
     debug.sf.high_fps_early_phase_offset_ns=6100000 \
@@ -130,3 +129,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000 \
     debug.sf.latch_unsignaled=0 \
     debug.sf.enable_hwc_vds=1
+    persist.dpm.feature=1
