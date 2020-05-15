@@ -183,26 +183,32 @@ on boot
    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
    chmod 0666 /dev/qseecom
 
-#Load WLAN driver
+# Load WLAN driver
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+
+# Smartcharge Permissions
+    chown system system /sys/class/power_supply/battery/charging_enabled 
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
 
 # Thermal Profile
     write /sys/class/thermal/thermal_message/sconfig 0
 
-#USB controller configuration
+# USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop sys.usb.configfs 1
 
-#pd-mapper
+# pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
     group system
 
-#Peripheral manager
+# Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
