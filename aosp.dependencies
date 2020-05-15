@@ -8,5 +8,11 @@
     "repository": "tesla59/hydra_kernel",
     "target_path": "kernel/xiaomi/sm6150",
     "branch": "ten"
+  },
+  {
+    "repository": "packages_apps_GoogleCamera_violet",
+    "target_path": "packages/apps/GoogleCamera",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
   }
 ]
