@@ -43,5 +43,7 @@
 
     <!-- Whether or not to support RCS User Capability Exchange -->
     <bool name="config_rcs_user_capability_exchange_enabled">false</bool>
-    
+	   
+    <!-- Flag indicating if hac is enabled -->
+    <bool name="hac_enabled">true</bool>
 </resources>
