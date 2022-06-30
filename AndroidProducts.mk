@@ -1,14 +1,14 @@
 #
 # Copyright (C) 2019 The LineageOS Project
-# Copyright (C) 2020 The SuperiorOS Project
+# Copyright (C) 2022 Evolution X
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_violet.mk
+    $(LOCAL_DIR)/evolution_violet.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_violet-userdebug \
-    superior_violet-user \
-    superior_violet-eng
+    evolution_violet-userdebug \
+    evolution_violet-user \
+    evolution_violet-eng
