@@ -137,9 +137,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Device-specific settings
+# DeviceParts
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    DeviceParts
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
