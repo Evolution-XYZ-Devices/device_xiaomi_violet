@@ -564,4 +564,7 @@
     <!-- Auto-brightness sensor type string -->
     <string name="config_displayLightSensorType">"android.sensor.light"</string>
 
+    <!-- Whether device supports in-display fingerprint -->
+    <bool name="config_supportsUdfps">false</bool>
+
 </resources>
