@@ -560,5 +560,8 @@
     <string name="config_sysGPULoad">"/sys/kernel/gpu/gpu_busy"</string>
     <integer name="config_sysCPUTempMultiplier">1000</integer>
     <integer name="config_sysBatteryTempMultiplier">10</integer>
-    
+
+    <!-- Auto-brightness sensor type string -->
+    <string name="config_displayLightSensorType">"android.sensor.light"</string>
+
 </resources>
