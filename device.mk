@@ -17,8 +17,7 @@ $(call inherit-product, vendor/xiaomi/violet/violet-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -220,9 +219,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gps/etc/,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Google Recorder
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 # Health
 PRODUCT_PACKAGES += \
@@ -470,6 +466,3 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libqdMetaData.vendor
-
-# Wallpapers
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
