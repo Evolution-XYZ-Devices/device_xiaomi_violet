@@ -419,8 +419,8 @@ PRODUCT_COPY_FILES += \
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     NexusLauncherRelease \
-    SettingsGoogle \
-    SystemUIGoogle
+    Settings \
+    SystemUI
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
